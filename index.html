@@ -11,7 +11,9 @@
   <button id="js-export">Export</button>
   <script src="./off.js"></script>
   <script>
-  var tracker = new OffTracker();
+  var tracker = new OffTracker({
+    elemsToTrack: document.querySelectorAll('[data-off]')
+  });
   document.getElementById('js-export').addEventListener('click', function(){
   	tracker.exportData();
   }, false);
