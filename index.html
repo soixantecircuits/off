@@ -8,7 +8,13 @@
 </head>
 <body>
   <a href="" class="test" data-off="ouou" data-category="User-input" data-action="click" data-label="test-button" data-value="0">test</a>
-
+  <button id="js-export">Export</button>
   <script src="./off.js"></script>
+  <script>
+  var tracker = new OffTracker();
+  document.getElementById('js-export').addEventListener('click', function(){
+  	tracker.exportData();
+  }, false);
+  </script>
 </body>
 </html>
