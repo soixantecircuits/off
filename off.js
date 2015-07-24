@@ -86,5 +86,10 @@ OffTracker.prototype = {
     var _self = this;
     var csv = _self.JSON2CSV(_self.trackArray);
     window.open("data:text/csv;charset=utf-8," + escape(csv));
+  },
+  getExportData: function(){
+    var _self = this;
+    var csv = _self.JSON2CSV(_self.trackArray);
+    return csv;
   }
 }
